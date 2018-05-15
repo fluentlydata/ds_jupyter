@@ -3,7 +3,7 @@
 This Docker image is based on jupyter/scipy-notebook ([https://hub.docker.com/r/jupyter/scipy-notebook/](https://hub.docker.com/r/jupyter/scipy-notebook/)) where some additional libraries has been installed.
 
 
-## How to use
+## How to use
 
 Clone the repository and build the image with 
 
@@ -16,6 +16,6 @@ Then start the container with
 Navigate to the URL printed in the console and start working from within the "work" directory.
 
 
-## Todos
+## Todos
 
 - [ ] make the "work" directory the initial page
