@@ -1,6 +1,8 @@
 # https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
 FROM jupyter/scipy-notebook
 
+RUN pip install --upgrade pip && conda update --yes conda && conda update --yes anaconda
+
 # Install Tensorflow (from https://github.com/jupyter/docker-stacks/blob/master/tensorflow-notebook/Dockerfile)
 RUN conda install --yes \
     'tensorflow=1.5*' \
@@ -14,6 +16,6 @@ RUN conda install --yes \
 ADD requirements.txt /tmp/requirements.txt
 RUN cd /tmp/ && \
     while read requirement; \
-    do conda install --yes $requirement || pip install $requirement; \
+    do conda install --update-dependencies --yes $requirement || pip install --upgrade $requirement; \
     done < requirements.txt
 
