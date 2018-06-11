@@ -1,4 +1,14 @@
-# DataScience Jupyter Notebook
+# DataScienceTools
+
+E.g. usage:
+
+> dst jupyter init
+
+Initializes a data science project similarly to https://drivendata.github.io/cookiecutter-data-science/.
+
+
+Old readme...
+
 
 This Docker image is based on jupyter/scipy-notebook ([https://hub.docker.com/r/jupyter/scipy-notebook/](https://hub.docker.com/r/jupyter/scipy-notebook/)) where some additional libraries has been installed.
 

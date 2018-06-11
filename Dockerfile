@@ -1,7 +1,7 @@
 # https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
 FROM jupyter/scipy-notebook
 
-RUN pip install --upgrade pip && conda update --yes conda && conda update --yes anaconda
+RUN pip install --upgrade pip && conda update --yes conda
 
 # Install Tensorflow (from https://github.com/jupyter/docker-stacks/blob/master/tensorflow-notebook/Dockerfile)
 RUN conda install --yes \
@@ -19,3 +19,6 @@ RUN cd /tmp/ && \
     do conda install --update-dependencies --yes $requirement || pip install --upgrade $requirement; \
     done < requirements.txt
 
+# ugly hack because pandas is not available in the newest version...
+# todo: fix that!
+RUN pip install --upgrade pandas
