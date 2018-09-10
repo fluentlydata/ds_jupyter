@@ -1,3 +1,4 @@
+plotly==2.4.1
 pandas>=0.22.0
 numpy>=1.14.0
 seaborn>=0.8.0
@@ -7,5 +8,5 @@ jupyter>=1.0.0
 scipy>=1.0.0
 apyori>=1.1.0
 pydotplus
-apyori==1.1.1
-
+wordcloud
+graphviz
